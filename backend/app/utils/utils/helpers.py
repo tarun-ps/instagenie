@@ -15,24 +15,6 @@ def get_data_project_domain(project_id: str):
     metadata = json.load(open(f"user_data/{project_id}/metadata.json"))
     return metadata["preliminary_analyse"]["domain"]
 
-# def get_data_project_data(project_id: str):
-#     metadata = json.load(open(f"user_data/{project_id}/metadata.json"))
-#     files = os.listdir(f"user_data/{project_id}/output")
-#     videos = [file for file in files if file.endswith(".mp4")]
-#     ret = {}
-#     ret["id"] = project_id
-#     ret["domain"] = metadata["preliminary_analyse"]["domain"]
-#     questions = metadata["questions"]["questions"]
-#     ret_questions = []
-#     for i, question in enumerate(questions):
-#         if f"output_{i}.mp4" in videos:
-#             ret_questions.append({"question": question, "video": f"{project_id}/video/{i}", "status": "ready"})
-#         else:
-#             ret_questions.append({"question": question, "video": None, "status": "processing"})
-#     ret["questions"] = ret_questions
-#     return ret
-
-
 def cleanup_folders():
     os.system("rm -rf output/*")
     os.system("rm -rf code/*")
@@ -189,14 +171,6 @@ def get_data_project_step4_status(project_id: str):
     else:
         return {"id": project_id, "status": "error"}
 
-# def get_data_project_step5_status(project_id: str):
-#     if os.path.exists(f"user_data/{project_id}/design.json"):
-#         return {"id": project_id, "status": "success"}
-#     else:
-#         return {"id": project_id, "status": "error"}
-
-# def get_data_project_step6_status(project_id: str):
-#     pass
 
 def get_audio_project_creation_status(project_id: str):
     pass
