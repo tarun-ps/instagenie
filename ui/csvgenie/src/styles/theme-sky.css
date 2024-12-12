@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply bg-white text-stone-500;
+}
+
+.skeleton-loader {
+  @apply bg-sky-100;
+}
+
+.tabs-list {
+  @apply bg-sky-500;
+}
+
+.tabs-trigger {
+  @apply text-sky-100;
+}
+
+.tabs-content {
+  @apply bg-sky-50;
+}
+
+.button {
+  @apply bg-sky-600 text-sky-100;
+} 
+
+.table {
+  @apply bg-stone-100;
+}
+
+.card-active {
+  @apply bg-sky-50;
+  @apply border-sky-200;
+  @apply border; 
+  @apply shadow-lg;
+}
+
+.table-active {
+  @apply bg-white;
+  @apply shadow-lg;
+  @apply border-sky-200;
+  @apply border; /* TODO: Add rounded corners */
+  @apply rounded-lg;
+}
+
+.separator {
+  @apply bg-stone-900;
+}
+
+.table-header {
+  @apply bg-stone-200;
+}
+
+.table-header-active {
+  @apply bg-sky-200;
+}
+
+.table-body {
+  @apply bg-stone-100;
+}
+
+.table-body-active {
+  @apply bg-white;
+}
+
+.table-cell {
+  @apply text-stone-900;
+}
+
+.table-cell-active {
+  @apply text-stone-900;
+}
+
+.table-head {
+  @apply text-stone-900;
+}
+
+.table-head-active {
+  @apply text-stone-900;
+}
+
+.table-row {
+  @apply bg-stone-100;
+}
+
+.table-row-active {
+  @apply bg-white;
+}
+
+.card {
+  @apply bg-stone-100;
+}
+.bg-quote-mark {
+  background-image: url('/quote.svg'); /* Replace with your icon path */
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 50px 50px; /* Adjust size as needed */
+  opacity: 0.6; /* Adjust opacity for a light effect */
+}
+
+:root {
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --chart-6: 142 88% 28%;
+  --chart-7: 25 34% 28%;
+  --chart-8: 350 80% 72%;
+  --chart-9: 240 1% 58%;
+  --chart-10: 224 5.9% 10%;
+}

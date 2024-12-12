@@ -1,0 +1,12 @@
+[Unit]
+Description=Instgenie worker
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/git/100x_buildathon/app
+ExecStart=/root/git/100x_buildathon/app/venv/bin/celery -A tasks.csv worker --concurrency=2 --loglevel=info -E --f /root/celery.logs
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

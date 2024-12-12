@@ -1,0 +1,12 @@
+[Unit]
+Description=Instgenie Webserver
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/git/100x_buildathon/app
+ExecStart=/root/git/100x_buildathon/app/venv/bin/uvicorn --host 0.0.0.0 --port 8002 server:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

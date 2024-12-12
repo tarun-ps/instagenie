@@ -1,0 +1,14 @@
+:root {
+  --bg-color-default: #f9fafb;
+  --text-color-default: #1f2937;
+}
+
+.theme-sky {
+  --bg-color: bg-white;
+  --text-color: #00796b;
+}
+
+.theme-default {
+  --bg-color: var(--bg-color-default);
+  --text-color: var(--text-color-default);
+} 
